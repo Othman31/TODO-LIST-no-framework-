@@ -5,22 +5,30 @@
 }
 
 :root {
-  --gray: #34495e;
-  --darkgray: #2c3e50;
+  --darkclr: #852747;
   --brown: #aa3333;
-  --yellow: #ffff77;
-  --blue: #30e0e0;
+  --medclr: #ff7777;
+  --lightclr: #f5c6a5;
 }
 
 body {
-  background-image: url(assets/confetti-doodles.svg);
+  background-image: url(assets/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
 
+.container {
+  margin-top: 2rem;
+}
+
 header {
   font-size: 1.5rem;
+  color: var(--lightclr);
+  margin-bottom: 1rem;
 }
 header,
 form {
@@ -31,9 +39,10 @@ form {
 }
 
 form input {
-  background: var(--blue);
-  color: var(--darkgray);
+  background: var(--lightclr);
+  color: var(--darkclr);
   padding: 1rem 1.5rem;
+
   border-radius: 0.2rem;
   transition: all 0.3s;
 }
@@ -45,17 +54,15 @@ form button {
 }
 
 form button {
-  margin-left: 1rem;
   padding: 0.3rem 0.5rem;
-  color: var(--yellow);
+  color: var(--lightclr);
   background: none;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 10%;
 }
 form button:hover {
-  background: var(--yellow);
-  color: var(--brown);
+  color: var(--darkclr);
 }
 
 .todo-container {
@@ -71,26 +78,29 @@ form button:hover {
 
 .todo {
   margin: 0.5rem;
-  background: white;
-  color: black;
-  font-size: 1.5rem;
+  /* background: var(--lightclr);
+  color: var(--darkclr); */
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-radius: 0.5rem;
   transition: all 0.5s ease;
 }
 
 .todo li {
   flex: 1;
+  padding: 0rem 1rem;
 }
+
 .trash-btn,
 .completed-btn {
-  background: brown;
+  background: var(--medclr);
   color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 1rem 1rem;
   cursor: pointer;
-  font-size: 0.5rem;
 }
 
 .completed {
@@ -113,8 +123,8 @@ select {
   /* Personalize */
   flex: 1;
   padding: 0 1em;
-  color: var(--darkgray);
-  background-color: var(--blue);
+  color: var(--darkclr);
+  background-color: var(--lightclr);
   background-image: none;
   cursor: pointer;
   font-size: 1rem;
@@ -128,9 +138,9 @@ select::-ms-expand {
 .selected {
   position: relative;
   display: flex;
-  width: 20em;
+  width: 13em;
   height: 3em;
-  border-radius: 0.25em;
+  border-radius: 0.35em;
   overflow: hidden;
   margin-left: 20px;
 }
@@ -141,12 +151,25 @@ select::-ms-expand {
   top: 0;
   right: 0;
   padding: 1em;
-  background-color: var(--yellow);
-  color: var(--darkgray);
+  background-color: var(--lightclr);
+  color: var(--darkclr);
   transition: 0.25s all ease;
   pointer-events: none;
 }
 /* Transition */
 .selected:hover::after {
-  color: #f39c12;
+  background: var(--medclr);
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 735px) {
+  form {
+    flex-direction: column;
+  }
+  form input {
+    width: 90%;
+  }
+  .selected {
+    width: 50%;
+  }
 }

@@ -20,15 +20,16 @@ function addTodo(e) {
   newTodo.classList.add("todo-item");
 
   todoDiv.style.backgroundColor = randomColor();
+
   todoDiv.appendChild(newTodo);
   //check mark button
   const completedButton = document.createElement("button");
-  completedButton.innerText = "L";
+  completedButton.innerHTML = `<i class="far fa-calendar-check"></i>`;
   completedButton.classList.add("completed-btn");
   todoDiv.appendChild(completedButton);
   //trash button
   const trashButton = document.createElement("button");
-  trashButton.innerText = "X";
+  trashButton.innerHTML = `<i class="fas fa-trash-restore-alt"></i>`;
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
 
