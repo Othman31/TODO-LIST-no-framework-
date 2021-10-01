@@ -7,16 +7,15 @@
 :root {
   --gray: #34495e;
   --darkgray: #2c3e50;
+  --brown: #aa3333;
+  --yellow: #ffff77;
+  --blue: #30e0e0;
 }
 
 body {
-  background-image: linear-gradient(
-    120deg,
-    rgb(116, 78, 106),
-    rgb(116, 21, 21)
-  );
+  background-image: url(assets/confetti-doodles.svg);
   color: white;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
 
@@ -31,24 +30,32 @@ form {
   align-items: center;
 }
 
+form input {
+  background: var(--blue);
+  color: var(--darkgray);
+  padding: 1rem 1.5rem;
+  border-radius: 0.2rem;
+  transition: all 0.3s;
+}
+
 form input,
 form button {
-  padding: 0.5rem;
   font-size: 2rem;
   border: none;
-  background: white;
 }
 
 form button {
-  margin-left: 0.5rem;
-  color: brown;
-  background: white;
+  margin-left: 1rem;
+  padding: 0.3rem 0.5rem;
+  color: var(--yellow);
+  background: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 10%;
 }
 form button:hover {
-  background: brown;
-  color: white;
+  background: var(--yellow);
+  color: var(--brown);
 }
 
 .todo-container {
@@ -106,8 +113,8 @@ select {
   /* Personalize */
   flex: 1;
   padding: 0 1em;
-  color: #fff;
-  background-color: var(--darkgray);
+  color: var(--darkgray);
+  background-color: var(--blue);
   background-image: none;
   cursor: pointer;
   font-size: 1rem;
@@ -134,8 +141,8 @@ select::-ms-expand {
   top: 0;
   right: 0;
   padding: 1em;
-  background-color: #34495e;
-
+  background-color: var(--yellow);
+  color: var(--darkgray);
   transition: 0.25s all ease;
   pointer-events: none;
 }
