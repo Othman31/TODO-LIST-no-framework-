@@ -19,28 +19,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header><h1>Todo List</h1></header>
+    <header><h1>Todo List</h1></header>
 
-      <form>
-        <input type="text" class="todo-input" />
-        <button class="todo-button" type="submit">
-          <i class="far fa-plus-square"></i>
-        </button>
-        <div class="select custom-select selected">
-          <select name="todos" class="filter-todo">
-            <option value="hide">--Filtering--</option>
-            <option value="all">ALL</option>
-            <option value="completed">Completed</option>
-            <option value="uncompleted">Uncompleted</option>
-          </select>
-        </div>
-      </form>
-
-      <div class="todo-container">
-        <ul class="todo-list"></ul>
+    <form>
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
+        <i class="far fa-plus-square"></i>
+      </button>
+      <div class="select custom-select selected">
+        <select name="todos" class="filter-todo">
+          <option value="hide">--Filtering--</option>
+          <option value="all">ALL</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
       </div>
+    </form>
+
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>

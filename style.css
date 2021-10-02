@@ -21,21 +21,19 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  margin-top: 2rem;
-}
-
 header {
   font-size: 1.5rem;
   color: var(--lightclr);
-  margin-bottom: 1rem;
+
+  padding-top: 5rem;
 }
 header,
 form {
-  min-height: 20vh;
+  /* min-height: 20vh; */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 form input {
@@ -113,6 +111,10 @@ form button:hover {
   opacity: 0;
 }
 
+.far,
+.fas {
+  pointer-events: none;
+}
 /* Styling select drop down CSS ONLY */
 select {
   /* Reset Select */
@@ -171,5 +173,9 @@ select::-ms-expand {
   }
   .selected {
     width: 50%;
+  }
+  header,
+  form {
+    padding-bottom: 0px;
   }
 }
